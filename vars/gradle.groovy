@@ -2,7 +2,7 @@
 
 def call(){
 	
-	println 'otro archivo'
+	figlet 'otro archivo'
 
 }
 
