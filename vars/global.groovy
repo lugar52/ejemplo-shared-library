@@ -17,19 +17,21 @@ def call(String param1, String param2){
                             def funciones   = new Funciones()
 
                             stage('Inicio'){
-                                figlet 'Inicio'
-                                figlet 'String 1: ' + param1
-                                figlet 'String 2: ' + param2
+                                figlet env.STAGE_NAME
+                                println 'String 1: ' + param1
+                                println 'String 2: ' + param2
 
                                 gradle.call()
                             }
 
                             stage('Union'){
-                                figlet 'Union de 2 Strings: ' + funciones.unirDosStrings(param1, param2)          
+                                figlet env.STAGE_NAME
+                                println 'Union de 2 Strings: ' + funciones.unirDosStrings(param1, param2)          
                             }
 
                             stage('MostrarNombre'){
-                                figlet 'Nombre obtenido desde Json: ' + funciones.mostrarNombre()
+                                figlet env.STAGE_NAME
+                                println 'Nombre obtenido desde Json: ' + funciones.mostrarNombre()
                             }
 
                         } catch(Exception e) {
