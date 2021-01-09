@@ -2,7 +2,8 @@
 
 def call(){
 	
-	figlet 'otro archivo'
+	bat 'set'
+	'otro archivo'
 
 }
 
